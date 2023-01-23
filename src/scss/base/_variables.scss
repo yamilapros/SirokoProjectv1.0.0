@@ -1,0 +1,35 @@
+//Fonts
+@font-face {
+    font-family: "LiberatorSIROKO-Medium";
+    src: url('../../fonts/LiberatorSIROKO-Medium.ttf');
+}
+@font-face {
+    font-family: "LiberatorSIROKO-Heavy";
+    src: url('../../fonts/LiberatorSIROKO-Heavy.ttf');
+}
+
+$font__inconsolata: 'Inconsolata', monospace;
+$font__inter: 'Inter', sans-serif;
+$font__liberator-medium: "LiberatorSIROKO-Medium";
+$font__liberator-heavy: "LiberatorSIROKO-Heavy";
+
+//Colors
+$light: #ffffff;
+$dark: #000000;
+$gray-light: #fefefe;
+$gray-medium: #dcdcdc;
+$gray-dark: #bebebe;
+$purple: #2c0c23;
+$purple-dark: #311429;
+$purple-medium: #44293c;
+$pink: #c92f58;
+$blue: #339b95;
+$blue-dark: #2C5E5B;
+$blue-light: #5dc2bd;
+$red: #c41414;
+
+//Devices 
+$phone: 480px;
+$tablet: 768px;
+$desktop: 992px;
+$desktopXL: 1200px;

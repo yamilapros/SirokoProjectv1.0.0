@@ -1,0 +1,20 @@
+@use 'base/variables' as v;
+
+.footer{
+    background-color: v.$dark;
+    color: v.$light;
+    font-family: v.$font__inconsolata;
+    padding: 2.5rem;
+    margin-top: auto;
+
+    p{
+        font-family: v.$font__inconsolata;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+
+    a{
+        color: v.$light;
+        text-decoration: underline;
+    }
+}

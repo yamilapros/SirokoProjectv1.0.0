@@ -1,0 +1,16 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.root{
+    background-image: url('../../../build/img/background.webp'),
+                      url('../../../build/img/background.jpg');
+    background-position: center center;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    height: 88vh;
+    overflow: hidden;
+    @include m.tablet{
+        height: 90vh;
+    }   
+}
+

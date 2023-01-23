@@ -1,0 +1,27 @@
+@use 'base/variables' as v;
+
+.button{
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: v.$font__inter;
+    font-weight: 700;
+    cursor: pointer;
+}
+.btn-underline{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: v.$light;
+    text-decoration: underline;
+    display: inline-block;
+    background-color: transparent !important;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

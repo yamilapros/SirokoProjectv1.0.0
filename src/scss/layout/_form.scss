@@ -1,0 +1,46 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.form{
+    width: 100%;
+    // max-width: 400px;
+    &__body{
+        display: flex;
+    }
+    label{
+        position: relative;
+        background-color: v.$purple-medium;
+        margin: 1rem 0;
+        color: v.$light;
+        font-family: v.$font__inconsolata;
+        font-size: 1.5rem;
+        font-weight: 400;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    input[type="radio"]{
+        display: none;
+    }
+    label:before{
+        content: '';
+        height: 2rem;
+        width: 2rem;
+        border: 0.2rem solid v.$light;
+        border-radius: 50%;
+        margin-right: 2rem;
+    }
+    input[type="radio"]:checked + label{
+        background-color: v.$pink;
+        color: v.$light;
+    }
+    input[type="radio"]:checked + label:before{
+        height: 2rem !important;
+        width: 2rem !important;
+        border: 3px solid v.$light !important;
+        background-color: v.$blue !important;
+    }
+}
+

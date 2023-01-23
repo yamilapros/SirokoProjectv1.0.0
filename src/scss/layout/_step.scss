@@ -1,0 +1,165 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.step{
+    min-width: 100%;
+    width: 100%;
+    transition: all 0.2s linear;
+    //Le pongo opacidad para no ver el "step"
+    opacity: 0;
+    //Sólo se ve step con clase "active"
+    &.active{
+        opacity: 1;
+    }
+    &.to-left{
+        margin-left: -100%;
+    }
+    &.inactive{
+        animation-name: scale;
+        animation-duration: .2s;
+        animation-direction: alternate;
+        animation-iteration-count: 2;
+    }
+    @keyframes scale {
+        from{
+            transform: scale(1);
+        }
+        to{
+            transform: scale(1.1);
+        }
+    }
+    &__bagde{
+        padding: 0.4rem 0.5rem;
+        background-color: v.$blue-light;
+        display: inline-block;
+        border-radius: 0.3rem;
+        text-align: center;
+
+        p{
+            color: v.$blue-dark;
+            font-size: 10px;
+            font-weight: 700 !important;
+            font-family: v.$font__inter;
+            margin: 0;
+        }
+    }
+    &__title{
+        color: v.$light;
+        font-family: v.$font__liberator-medium;
+        font-size: 3.5rem;
+    }
+    &__subtitle{
+        color: v.$light;
+        font-family: v.$font__inter;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    &__button{
+        background-color: v.$blue;
+        color: v.$light;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: darken(v.$blue, 3%);
+        }
+    }
+    &__body{
+        background-color: v.$purple-dark;
+        padding: 2rem;
+        border-radius: 0.3rem;
+    }
+    &__coupon{
+        background: linear-gradient(270deg, #FFFFFF 0%, #BDBDBD 100%);
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        height: 49px;
+    }
+    &__discount-code{
+        font-size: 2.5rem;
+        color: v.$dark;
+        font-weight: 700;
+        font-family: v.$font__inconsolata;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        max-width: 10rem;
+    }
+    &__button-copy{
+        font-size: 1.5rem;
+        font-family: v.$font__inconsolata;
+        font-weight: 700;
+        border: 2px solid v.$dark;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+    }
+    &__button-copied{
+        font-size: 1.5rem;
+        font-family: v.$font__inconsolata;
+        font-weight: 700;
+        border: 2px solid v.$dark;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        background-color: v.$dark;
+        color: v.$light;
+        border-radius: 2px solid v.$light;
+    }
+    &__text{
+        font-size: 1.6rem;
+        font-weight: 400;
+        font-family: v.$font__inconsolata;
+        color: v.$light;
+        line-height: 18.72px;
+    }
+    &__clock{
+        background-color: v.$purple;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        height: 49px;
+        border-radius: 0.3rem;
+        color: v.$light;
+        font-size: 2.7rem;
+        font-family: v.$font__inconsolata;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        gap: 1rem;
+
+        &__countdown{
+            color: #ffffff;
+            font-size: 2.7rem;
+            font-family: "Inconsolata", monospace;
+            font-weight: 700;
+        }
+    }
+    &__error{
+        background-color: v.$red;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        height: 49px;
+        border-radius: 0.3rem;
+        color: v.$light;
+        font-family: v.$font__inconsolata;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    
+        
+        .material-symbols-outlined{
+            font-size: 27px;
+        }
+    }
+    &__error-span{
+        font-size: 1.6rem !important;
+        font-weight: 700;
+        color: v.$light;
+    }
+    &__footer{
+        padding: 0 2rem;
+    }
+}
